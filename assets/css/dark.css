@@ -1,0 +1,270 @@
+/* 
+   Bail Bond Agency Website
+   Premium ThemeForest-Ready CSS Stylesheet (Dark Theme Overrides)
+*/
+
+[data-theme="dark"] {
+  /* Dark Mode Palette Overrides */
+  --bg-color: #020617;        /* Very Deep Slate */
+  --surface: #0B1120;         /* Deep Navy Surface */
+  --primary: #0F172A;         /* Primary Slate */
+  --secondary: #CBD5E1;       /* Light Slate */
+  --accent: #3B82F6;          /* Bright Professional Blue */
+  --accent-hover: #60A5FA;
+  --text-primary: #E2E8F0;    /* High-contrast off-white */
+  --text-secondary: #94A3B8;  /* Muted Slate Gray */
+  
+  --border-color: #1E293B;
+  --border-focus: #334155;
+  --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.4);
+  
+  --glass-bg: rgba(11, 17, 32, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  
+  --glass-backdrop: blur(14px);
+}
+
+[data-theme="dark"] body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] h1, 
+[data-theme="dark"] h2, 
+[data-theme="dark"] h3, 
+[data-theme="dark"] h4, 
+[data-theme="dark"] h5, 
+[data-theme="dark"] h6 {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] p {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .site-header {
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .nav-link {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .nav-link:hover, 
+[data-theme="dark"] .nav-item.active .nav-link {
+  color: var(--accent);
+}
+
+[data-theme="dark"] .nav-dropdown {
+  background-color: var(--surface);
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .dropdown-link:hover,
+[data-theme="dark"] .dropdown-link.active {
+  background-color: var(--bg-color);
+  color: var(--accent);
+}
+
+[data-theme="dark"] .theme-toggle-btn {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .theme-toggle-btn:hover {
+  background-color: var(--bg-color);
+  color: var(--accent);
+}
+
+[data-theme="dark"] .btn-secondary {
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+  background-color: var(--bg-color);
+  border-color: var(--text-secondary);
+}
+
+[data-theme="dark"] .hero-overlay {
+  background: linear-gradient(135deg, rgba(2, 6, 23, 0.96) 0%, rgba(2, 6, 23, 0.85) 100%);
+}
+
+[data-theme="dark"] .card-classic {
+  background-color: var(--surface);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .card-classic:hover {
+  border-color: var(--border-focus);
+}
+
+[data-theme="dark"] .card-icon-box {
+  background-color: rgba(59, 130, 246, 0.08);
+  color: var(--accent);
+}
+
+[data-theme="dark"] .card-classic:hover .card-icon-box {
+  background-color: var(--accent);
+  color: #020617;
+}
+
+[data-theme="dark"] .timeline-track::before {
+  background-color: var(--border-color);
+}
+
+[data-theme="dark"] .timeline-badge {
+  background-color: var(--surface);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+[data-theme="dark"] .timeline-step:hover .timeline-badge {
+  background-color: var(--accent);
+  color: #020617;
+}
+
+[data-theme="dark"] .emergency-banner {
+  background-color: var(--surface);
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .emergency-banner h2 {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .phone-link-large {
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .phone-link-large:hover {
+  color: var(--accent) !important;
+}
+
+[data-theme="dark"] .tab-nav {
+  border-bottom: 2px solid var(--border-color);
+}
+
+[data-theme="dark"] .tab-btn {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .tab-btn:hover {
+  color: var(--accent);
+}
+
+[data-theme="dark"] .tab-btn.active {
+  color: var(--accent);
+}
+
+[data-theme="dark"] .accordion-item {
+  border-color: var(--border-color);
+  background-color: var(--surface);
+}
+
+[data-theme="dark"] .accordion-header {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .accordion-body-inner {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .form-control {
+  background-color: var(--surface);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .form-control:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+[data-theme="dark"] .callout-box {
+  background-color: rgba(59, 130, 246, 0.03);
+  border-left-color: var(--accent);
+}
+
+[data-theme="dark"] .blog-card {
+  border-color: var(--border-color);
+  background-color: var(--surface);
+}
+
+[data-theme="dark"] .blog-card:hover {
+  border-color: var(--border-focus);
+}
+
+[data-theme="dark"] .blog-meta {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .page-header {
+  background-color: var(--surface);
+  border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .breadcrumb-item::after {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .pricing-table-wrapper {
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .pricing-table {
+  background-color: var(--surface);
+}
+
+[data-theme="dark"] .pricing-table th {
+  background-color: var(--primary);
+  color: var(--text-primary);
+  border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .pricing-table td {
+  border-bottom-color: var(--border-color);
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .site-footer {
+  background-color: #020617;
+  border-top-color: var(--border-color);
+}
+
+[data-theme="dark"] .footer-column-title {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .footer-about p {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .footer-links a {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .footer-links a:hover {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .footer-bottom {
+  border-top-color: var(--border-color);
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .site-footer .logo {
+  color: #FFFFFF !important;
+}
+
+@media (max-width: 1024px) {
+  [data-theme="dark"] .nav-menu {
+    background-color: var(--surface);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  [data-theme="dark"] .nav-link {
+    border-bottom-color: var(--border-color);
+  }
+}
