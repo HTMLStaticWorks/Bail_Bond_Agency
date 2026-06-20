@@ -223,6 +223,26 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 1500);
     });
   });
+
+  // 7. Password Visibility Toggle
+  const passwordToggles = document.querySelectorAll('.password-toggle-btn');
+  passwordToggles.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const wrapper = btn.closest('.password-toggle-wrapper');
+      if (wrapper) {
+        const input = wrapper.querySelector('input');
+        const icon = btn.querySelector('i');
+        if (input && icon) {
+          const isPassword = input.type === 'password';
+          input.type = isPassword ? 'text' : 'password';
+          icon.setAttribute('data-lucide', isPassword ? 'eye-off' : 'eye');
+          if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+          }
+        }
+      }
+    });
+  });
 });
 
 // Inline CSS for the loading animation spinner in JS

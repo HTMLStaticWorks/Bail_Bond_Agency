@@ -33,7 +33,14 @@
 
   <!-- Main Content -->
   <main
-    style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background-color: var(--bg-color);">
+    style="position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; background-color: var(--bg-color);">
+    
+    <!-- Top Right Actions (Theme & RTL Toggles) -->
+    <div class="auth-actions">
+      <button class="rtl-toggle-btn" aria-label="Toggle RTL layout">RTL</button>
+      <button class="theme-toggle-btn" aria-label="Toggle dark mode"></button>
+    </div>
+
     <div class="custom-container auth-container" style="padding: 40px 0; max-width: 480px; width: 100%;">
       <div class="glass-card auth-card reveal-on-scroll" style="width: 100%;">
 
@@ -63,26 +70,29 @@
           </div>
 
           <div class="form-group">
-            <div class="d-flex justify-content-between mb-1">
-              <label class="form-label mb-0" for="loginPassword">Password</label>
-              <a href="404.html" style="font-size: 0.85rem; font-weight: 500;">Forgot Password?</a>
+            <label class="form-label" for="loginPassword">Password</label>
+            <div class="password-toggle-wrapper">
+              <input type="password" class="form-control" id="loginPassword" required>
+              <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">
+                <i data-lucide="eye"></i>
+              </button>
             </div>
-            <input type="password" class="form-control" id="loginPassword" required>
           </div>
 
-          <div class="form-check mb-4" style="font-size: 0.85rem; color: var(--text-secondary);">
-            <input class="form-check-input" type="checkbox" id="rememberMe">
-            <label class="form-check-label" for="rememberMe">
-              Remember me
-            </label>
+          <div class="d-flex justify-content-between align-items-center mb-4" style="font-size: 0.85rem;">
+            <div class="form-check mb-0" style="color: var(--text-secondary);">
+              <input class="form-check-input" type="checkbox" id="rememberMe">
+              <label class="form-check-label" for="rememberMe" style="margin-bottom: 0;">
+                Remember me
+              </label>
+            </div>
+            <a href="404.html" style="font-weight: 500;">Forgot Password?</a>
           </div>
 
-          <div style="display: flex; justify-content: center;">
-            <button type="submit" class="btn btn-primary mb-3">
-              <i data-lucide="log-in"></i>
-              Authenticate Account
-            </button>
-          </div>
+          <button type="submit" class="btn btn-primary mb-3 w-100">
+            <i data-lucide="log-in"></i>
+            Authenticate Account
+          </button>
 
           <!-- Divider -->
           <div class="d-flex align-items-center my-3">

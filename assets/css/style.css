@@ -736,6 +736,47 @@ textarea.form-control {
   min-height: 120px;
 }
 
+/* Password Visibility Toggle */
+.password-toggle-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-toggle-wrapper .form-control {
+  padding-right: 45px;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.password-toggle-btn:hover {
+  color: var(--accent);
+}
+
+/* RTL Support for Password Toggle */
+[dir="rtl"] .password-toggle-wrapper .form-control {
+  padding-right: 16px;
+  padding-left: 45px;
+}
+
+[dir="rtl"] .password-toggle-btn {
+  right: auto;
+  left: 12px;
+}
+
 /* Callout Info Boxes */
 .callout-box {
   border-left: 4px solid var(--accent);
@@ -988,6 +1029,16 @@ textarea.form-control {
 .auth-card {
   max-width: 480px;
   width: 100%;
+}
+
+.auth-actions {
+  position: absolute;
+  inset-block-start: 20px;
+  inset-inline-end: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
 }
 
 /* Responsive Navigation Bar Styling rules */
@@ -1248,3 +1299,6 @@ textarea.form-control {
 /* Height Utilities */
 .h-100 { height: 100% !important; }
 .h-auto { height: auto !important; }
+
+/* Width Utilities */
+.w-100 { width: 100% !important; }
