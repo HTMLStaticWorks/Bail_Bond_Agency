@@ -416,6 +416,27 @@ img {
   border: 1px solid var(--border-color);
 }
 
+.hero-list {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 991px) {
+  .hero-list {
+    align-items: flex-start !important;
+    width: max-content;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+  }
+
+  .hero-section .hero-title,
+  .hero-section .hero-desc {
+    text-align: center !important;
+  }
+}
+
 /* Glass Cards & Elements */
 .glass-card {
   background: var(--glass-bg);
