@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
         alertBox.style.backgroundColor = 'rgba(34, 197, 94, 0.05)';
         alertBox.style.marginTop = '1.5rem';
         alertBox.innerHTML = `
-          <h5 style="color: #15803D; font-family: var(--font-headings); font-weight: 700; margin-bottom: 0.5rem;">Submission Successful</h5>
+          <h5 style="color: #15803D; font-family: var(--font-headings); font-weight: 500; margin-bottom: 0.5rem;">Submission Successful</h5>
           <p style="color: #166534; font-size: 0.95rem; margin-bottom: 0;">Thank you. Your message has been received securely. An on-duty agent will call or email you within 15 minutes.</p>
         `;
         
@@ -241,6 +241,34 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
       }
+    });
+  });
+
+  // 8. Back to Top Button
+  const backToTopBtn = document.createElement('button');
+  backToTopBtn.className = 'back-to-top';
+  backToTopBtn.setAttribute('aria-label', 'Back to top');
+  backToTopBtn.innerHTML = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m18 15-6-6-6 6"/>
+    </svg>
+  `;
+  document.body.appendChild(backToTopBtn);
+
+  const toggleBackToTop = () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add('visible');
+    } else {
+      backToTopBtn.classList.remove('visible');
+    }
+  };
+
+  window.addEventListener('scroll', toggleBackToTop);
+  
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
     });
   });
 });
