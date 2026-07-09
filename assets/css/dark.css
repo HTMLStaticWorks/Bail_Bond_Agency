@@ -88,7 +88,7 @@
 }
 
 [data-theme="dark"] .hero-overlay {
-  background: linear-gradient(135deg, rgba(2, 6, 23, 0.96) 0%, rgba(2, 6, 23, 0.85) 100%);
+  background: linear-gradient(135deg, rgba(2, 6, 23, 0.75) 0%, rgba(2, 6, 23, 0.45) 100%);
 }
 
 [data-theme="dark"] .card-classic {
