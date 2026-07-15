@@ -446,9 +446,9 @@ img {
 /* Hero Section */
 .hero-section {
   position: relative;
-  min-height: 100vh;
-  padding-top: calc(var(--nav-height) + 40px + 60px); /* Adjust for 40px topbar */
-  padding-bottom: 60px;
+  min-height: calc(100vh - (var(--nav-height) + 40px));
+  padding-top: 80px;
+  padding-bottom: 80px;
   display: flex;
   align-items: center;
   background-size: cover;
@@ -1001,7 +1001,7 @@ textarea.form-control {
 
 /* Page Header component */
 .page-header {
-  padding: 160px 0 60px 0; /* Adjust for 40px topbar */
+  padding: 60px 0;
   background-color: var(--surface);
   border-bottom: 1px solid var(--border-color);
   margin-bottom: 0;
